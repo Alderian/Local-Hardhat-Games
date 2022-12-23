@@ -9,7 +9,7 @@ async function main() {
   const game = await hre.ethers.getContractAt(contractName, gameAddr);
 
   // do whatever you need to do to win the game here:
-  const tx = await game.win(45);
+  const tx = await game.win(56);
 
   // did you win? Check the transaction receipt!
   // if you did, it will be in both the logs and events array
