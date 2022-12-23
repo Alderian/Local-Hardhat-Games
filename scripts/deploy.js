@@ -1,5 +1,7 @@
-// replace the name of the contract with which one you want to deploy!
-const contractName = "Game1";
+require("dotenv").config();
+
+// add the game address here and update the contract name if necessary
+const contractName = process.env.GAME_NAME || "";
 
 async function main() {
   const Game = await hre.ethers.getContractFactory(contractName);
@@ -9,8 +11,8 @@ async function main() {
 }
 
 main()
- .then(() => process.exit(0))
- .catch(error => {
-   console.error(error);
-   process.exit(1);
- });
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
